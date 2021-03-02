@@ -1,0 +1,7 @@
+#/.vs - not sure if we need this?
+/src/DotNetPaging/bin
+/src/DotNetPaging/obj
+#/src/.vs - not sure if we need this?
+/src/DotNetPaging.Examples/bin
+/src/DotNetPaging.Examples/obj
+

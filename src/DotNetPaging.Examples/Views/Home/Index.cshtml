@@ -1,0 +1,40 @@
+﻿@using DotNetPaging;
+@model DotNetPaging.Examples.Models.HomeIndex_VM
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<h1>Paging</h1>
+
+
+@* Delete Later
+<div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
+     page-class="btn" page-class-normal="btn-secondary"
+     page-class-selected="btn-primary" class="btn-group pull-right m-1">
+</div> *@
+
+@* @Html.PagedListPager((IPagedList)ViewBag.OnePageOfProducts, page => Url.Action("Index", new { page = page })) *@
+
+<p><h6>Full Pager</h6><pager class="pager-container" list="@Model.OnePageOfData" options="@PagedListRenderOptions.Bootstrap4Full" asp-action="Index" asp-controller="Home"  /></p>
+
+
+<table class="table">
+    @foreach(var item in @Model.OnePageOfData)
+    {
+        <tr>
+            <td>
+                @item
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
